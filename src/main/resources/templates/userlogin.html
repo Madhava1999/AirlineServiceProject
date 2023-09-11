@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+<style>
+  body {
+    background-color: #f0f0f0; /* Background color for the entire page */
+    font-family: Arial, sans-serif; /* Font family for the entire page */
+  }
+  /* Container for the form */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Left side with image */
+  .left {
+    flex: 1;
+    text-align: center;
+  }
+  /* Right side with the form */
+  .right {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  /* Form styles */
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #333; /* Header text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow effect */
+  }
+  label {
+    font-size: 24px;
+    color: #333; /* Label text color */
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Input border color */
+    border-radius: 5px;
+  }
+  input{
+  background: transparent;
+  }
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+    font-family:monospace;
+    font-weight:bold;
+    color:maroon;
+    font-size:20px;
+    
+    background: transparent;
+    border-color: #007bff; /* Input border color when focused */
+  }
+  button[type="submit"] {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Button background color on hover */
+  }
+  a {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body style="background-image: url('https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg');background-repeat: no-repeat;background-size: 100% 100%; background-attachment: fixed;">
+<center>
+<p th:text="${msg}" style="color: #FF0000; padding: 10px; font-size: 24px;"></p></center>
+<div class="container">
+  <div class="left">
+  <!--   <img src="./LOGIN form.jpg" alt="Login Image" width="300px"> -->
+    <img src="https://uploads.commoninja.com/searchengine/wordpress/as-admin-customizer.png" alt="Admin Login Logo" width="300px">
+    
+  </div>
+  <div class="right" style="margin-left: 100px;background: transparent;" >
+    <form action="/userlogin" method="post">
+      <h1 style=" font-size: 60px;
+            text-shadow: 5px 5px 3px blue;
+            font-style: italic;
+            color :red;
+            text-decoration: underline;
+      text-decoration-style: wavy double;
+      text-decoration-color: Yellow;text-decoration-thickness: 10px;">USER LOG IN</h1>
+      <label for="id">Username Or mobileNumber</label><br>
+      <input type="text" name="id" id="id" placeholder="Username" required><br><br>
+      <label for="password">Password</label><br>
+      <input type="password" name="password" id="passwordField" required placeholder="Enter password">
+      <span id="togglePassword" style="cursor: pointer;position: relative;right: 30px"  onclick="togglePasswordVisibility()">🙈</span>
+      <br>
+<!--       <h3><ins><a href="./forgot password.html" target="_blank">Forgot password?</a></ins></h3>--> 
+  <button type="submit">LOGIN</button>
+    </form>
+        <hr>
+           <h1 style="text-align: center;color: #333;font-size: 20px;margin-right: 300px"><a href ="userRegistration" >Create new Account...</a> </h1>
+           
+  </div>
+  
+</div>
+<script>
+function togglePasswordVisibility() {
+  var passwordField = document.getElementById("passwordField");
+  var togglePassword = document.getElementById("togglePassword");
+
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    togglePassword.textContent = "🐵";
+  } else {
+    passwordField.type = "password";
+    togglePassword.textContent = "🙈";
+  }
+}
+</script>
+</body>
+</html>

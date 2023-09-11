@@ -1,0 +1,109 @@
+<!-- <!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p th:text="${user.lastName}"></p>
+this home
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+section{
+width: 75%;
+height:600px;
+/* background-image: url("https://assets.fta.cirium.com/wp-content/uploads/2021/12/03211704/ASir-image-3.jpg");
+background-repeat:no-repeat;
+background-size:100% 100%; */
+margin-top: 50px;
+display: flex;
+align-items:center;
+justify-content: space-around;
+box-shadow: 5px 5px 20px green;
+border-radius: 30px;
+}
+.dising{
+
+width: 43%;
+height: 43%;
+box-shadow: 1px 1px 10px green;
+border-radius: 20px;
+border: 9px double red;
+}
+.dising:hover{
+width: 50%;
+height: 50%;
+.img{
+
+width: 95%;
+height: 95%;
+box-shadow: 2px 2px 10px green;
+
+border: 9px double yellow;
+
+}
+.h{
+font-size: 0px ;
+}
+
+}
+.h,#h1{
+font-size: 20px;
+font-family: monospace;
+font-style: italic;
+text-shadow: 0px 0px 10px orange;
+color: yellow;
+}
+</style>
+</head>
+
+<body style="background-image: url('https://miro.medium.com/v2/resize:fit:512/1*UseU8sijC1ndlZqz2g5cwA.jpeg');background-size: 100% 100%;background-repeat: no-repeat;background-attachment: fixed ;">
+<center><p th:text="${msg11}" style="color: #FF0000; padding: 10px; font-size: 24px;"></p></center>
+<center>
+
+<marquee scrollamount="10" width="60%" direction="right"  style="color: red ;background-image:0px; flex: di;"><h1 style="padding: 10px;font-size: 30px;color: red" id="h1">Welcome to Flight Info  Service </h1></marquee>
+<center><p th:text="${msg12}" style="color: #008000; padding: 10px;  font-size: 24px;"></p></center>
+<center>
+<section  id="sec">
+
+<div  class="dising" id="div1">
+<h2 class="h" >Search The Flight with Airline,From,To and date</h2>
+<a href ="/flightinfo1" >
+<img class="img" src="https://wallpaperaccess.com/full/2350734.png" width="50%"  height="40%" style="border-radius: 50px">
+</a>
+
+
+</div>
+<div class="dising" id="div2">
+<h2 class="h">Search The Flight with Airline name,flight number,date,time</h2>
+<a href="/flightinfo2">
+<img class="img" src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?w=2000" width="50%"  height="40%" style="border-radius: 50px">
+</a>
+</div>
+
+<div class="dising" id="div3">
+<h2 class="h">Search The flight with number, time And date</h2>
+<a href="/flightinfo3">
+<img class="img" src="https://media.istockphoto.com/id/1137971264/vector/airplane-fly-out-logo-plane-taking-off-stylized-sign.jpg?s=612x612&w=0&k=20&c=TH1vDs4wmGnfWapq_e1XYxqzQV_qxaF4_aJWoDJyKNI=" width="50%"  height="40%" style="border-radius: 50px">
+</a>
+</div>
+
+<div class="dising" id="div4">
+<h2 class="h">Search Flight From,To And Date</h2>
+<a href="/flightinfo4">
+<img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNhiJTv0bUFW8UG5Dl0qWN8raWa0QvX_hY1A&usqp=CAU" width="50%"  height="40%" style="border-radius: 50px">
+</a>
+</div>
+
+</section>
+</center>
+</body>
+</html>
+
+

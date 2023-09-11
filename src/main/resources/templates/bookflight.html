@@ -1,0 +1,140 @@
+ <!-- <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p th:text="${msg}" style="color: #FF0000; padding: 10px; font-size: 24px;"></p>
+</body>
+</html> -->
+<!DOCTYPE>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style type="text/css">
+     body {
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230407/pngtree-flight-booking-sign-at-an-airport-with-a-plane-in-the-photo-image_2280074.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+form {
+    max-width: 600px;
+    margin-top:50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ background:transparent;
+float: right;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+ h1, h2 {
+            color: #007bff; /* Heading text color */
+        }
+
+label {
+    font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+    
+    </style>
+</head>
+<body >
+
+<div style="color: red;float: left;width: 550px ; height: 500px;background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220313/pngtree-spring-festival-ticket-grab-concept-map-air-ticket-map-image_1060234.jpg');margin-top: 100px;background-repeat: no-repeat;margin-left: 50px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);background-size:  100% 100%;    border-radius: 10px;"> </div>
+      <center>
+      <center><p th:text="${msg}" style="color: #FF0000; padding: 10px; font-size: 24px;"></p></center>
+    <form action="/bookingOpration"  method="get">
+
+    <div>
+        <h1><ins style="color: black"> Book An Ticket</ins></h1>
+   <table>
+    <tr>
+        <td><label for="" style="font-size: 30px;">Enter Flight number</label></td>
+        <td>:</td>
+        <td><input type="text" name="number" id="" placeholder="Flight number" required style="font-size: 20px;width: 200px;"></td>
+    </tr>
+    <tr>
+        <td><label for="" style="font-size: 30px;"> Enter Flight Starting Location</label></td>
+        <td>:</td>
+        <td><input type="text" name="from" id="" placeholder="From location"  style="font-size: 20px;width: 200px;"></td>
+    </tr>
+    <tr>
+        <td><label for="" style="font-size: 30px;">Enter Flight Ending Location</label></td>
+        <td>:</td>
+        <td><input type="text" name="to" id="" placeholder="Ending Location" required style="font-size: 20px;width: 200px;" ></td>
+    </tr>
+    <tr>
+        <td><label for="" style="font-size: 30px;">Enter Flight  Stating Date</label></td>
+        <td>:</td>
+        <td><input type="date" name="date" id=""  required style="font-size: 20px;width: 200px;"></td>
+    </tr>
+ </table><br>
+ 
+           <input type="checkbox" name="" id="" style="height: 20px;width: 30px;" required="required"><label for="" style="font-size: 30px;">  I have agreed to the terms and conditions</label>
+           <table>
+            <tr><td><a href="./login form.html" target="_blank"> <input type="submit" name="" id="" style="width: 180px;height: 50px;font-size: 30px;background-color: blue;color: white;" value="Book Ticket"></a></td></tr>
+           </table>
+           
+          
+</center></div></form>
+
+</body>
+</html>

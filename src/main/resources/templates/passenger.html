@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style type="text/css">
+        body {
+            background-image: url('https://wallpaperaccess.com/full/1470797.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            max-width: 700px;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background: transparent;
+            float: right;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="number"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="checkbox"] {
+            vertical-align: middle;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+<center><p th:text="${msg}" style="color: #FF0000; padding: 10px; font-size: 24px;"></p></center>
+<!-- <div style="color: red;float: left;width: 550px; height: 500px;background-image: url('https://e0.pxfuel.com/wallpapers/898/938/desktop-wallpaper-travel-tours-and-travels-background-travel-and-tourism.jpg');margin-top: 500px;background-repeat: no-repeat;margin-left: 50px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);background-size:  100% 100%;border-radius: 10px;"> </div>
+ --><center>
+    <form action="/passengerOpration">
+        <h1><ins style="color: black">Add Passenger</ins></h1>
+        <div id="passdiv">
+
+            <table class="">
+                <tr>
+                    <td><label for="" style="font-size: 30px;">Enter Passenger First Name</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="firstname" id="" placeholder="Enter First Name" required style="font-size: 20px;width: 200px;" ></td>
+                </tr>
+                <tr>
+                    <td><label for="" style="font-size: 30px;"> Enter Passenger Last Name</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="lastname" id="" placeholder="Enter LastName" style="font-size: 20px;width: 200px;"></td>
+                </tr>
+              <!--    <tr>
+        <td><label for="" style="font-size: 30px;">Gender</label></td>
+        <td><label for="maleRadio" style="font-size: 20px;">Male</label><input type="radio" name="gender"  value ="male"  id="maleRadio" style="width: 20px;"> </td>
+        <td><label for="femaleRadio" style="font-size: 20px;">Female</label><input type="radio" name="gender"   value="female" id="femaleRadio"  style="width: 20px;"> </td>
+    </tr> -->
+    <tr>
+    <td><label for="genderSelect" style="font-size: 30px;">Gender</label></td>
+    <td> : </td>
+    <td colspan="2">
+        <select name="gender" id="genderSelect" style="font-size: 20px;width: 200px; padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+    </td>
+</tr>
+    
+                <tr>
+                    <td><label for="" style="font-size: 30px;">Enter Passenger Email</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="email" id="" placeholder="Enter Email" required style="font-size: 20px;width: 200px;" title="please start with upper case and end with @gmail.com"></td>
+                </tr>
+                <tr>
+                    <td><label for="" style="font-size: 30px;">Enter Passenger Mobile</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="number" id="" required style="font-size: 20px;width: 200px;" placeholder="Enter Mobile number"></td>
+                </tr>
+            </table><br>
+</div>
+  <button type="button" id="add-passenger-button" style="font-size: 30px; margin-right: 600px">+</button>
+<br>
+            <table>
+              <input type="checkbox" name="" id="" style="height: 20px;width: 30px;" required="required"><label for="" style="font-size: 30px;">  I have agreed to the terms and conditions</label>
+                <tr><td><a href="./login form.html" target="_blank"> <input type="submit" name="" id="" style="width: 180px;height: 50px;font-size: 30px;background-color: blue;color: white;" value="Book Ticket"></a></td></tr>
+            </table>
+
+          
+        
+    </form>
+</center>
+<script>
+    var passengerCount = 1; // Initialize passenger count
+
+    document.getElementById("add-passenger-button").addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent the form from submitting
+        addPassenger();
+    });
+
+    function addPassenger() {
+        passengerCount++; // Increment passenger count
+
+        var passDiv = document.getElementById("passdiv");
+        var newPassengerDiv = document.createElement("div");
+        newPassengerDiv.innerHTML = `
+            <h1><ins style="color: black">Add Passenger ${passengerCount}</ins></h1>
+            <table class="">
+                <tr>
+                    <td><label for="" style="font-size: 30px;">Enter Passenger First Name</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="firstname" id="" placeholder="Enter First Name" required style="font-size: 20px;width: 200px;" ></td>
+                </tr>
+                <tr>
+                    <td><label for="" style="font-size: 30px;"> Enter Passenger Last Name</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="lastname" id="" placeholder="Enter Last Name" style="font-size: 20px;width: 200px;"></td>
+                </tr>
+               
+                    <tr>
+                    <td><label for="genderSelect" style="font-size: 30px;">Gender</label></td>
+                    <td> : </td>
+                    <td colspan="2">
+                        <select name="gender" id="genderSelect" style="font-size: 20px;width: 200px; padding: 10px;
+                            margin-bottom: 15px;
+                            border: 1px solid #ccc;
+                            border-radius: 5px;
+                            font-size: 18px;">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="" style="font-size: 30px;">Enter Passenger Email</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="email" id="" placeholder="Enter Email" required style="font-size: 20px;width: 200px;" title="please start with upper case and end with @gmail.com"></td>
+                </tr>
+                <tr>
+                    <td><label for="" style="font-size: 30px;">Enter Passenger Mobile</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="number" id="" required style="font-size: 20px;width: 200px;" placeholder="Enter Mobile number"></td>
+                </tr>
+            </table><br>
+            <button type="button" class="remove-button" onclick="removeStudentField(this)">-</button>
+        `;
+
+        passDiv.appendChild(newPassengerDiv);
+    }
+    function removeStudentField(button) {
+        var container = document.getElementById("passdiv");
+        container.removeChild(button.parentElement);
+    }
+</script>
+
+</body>
+</html>

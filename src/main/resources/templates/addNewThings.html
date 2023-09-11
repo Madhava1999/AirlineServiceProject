@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+section{
+width: 65%;
+height:600px;
+background-image: url("https://assets.fta.cirium.com/wp-content/uploads/2021/12/03211704/ASir-image-3.jpg");
+background-repeat:no-repeat;
+background-size:100% 100%;
+margin-top: 50px;
+display: flex;
+align-items:center;
+justify-content: space-around;
+box-shadow: 5px 5px 20px green;
+border-radius: 30px;
+}
+.dising{
+
+width: 43%;
+height: 43%;
+box-shadow: 1px 1px 10px green;
+border-radius: 20px;
+border: 9px double red;
+}
+.dising:hover{
+width: 50%;
+height: 50%;
+.img{
+
+width: 95%;
+height: 95%;
+box-shadow: 2px 2px 10px green;
+
+border: 9px double yellow;
+
+}
+.h{
+font-size: 0px ;
+}
+
+}
+.h,#h1{
+font-size: 30px;
+font-family: monospace;
+font-style: italic;
+text-shadow: 0px 0px 10px orange;
+color: yellow;
+}
+/* #div1{
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNhiJTv0bUFW8UG5Dl0qWN8raWa0QvX_hY1A&usqp=CAU");
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+#div2{
+background-image: url("data:image/jpeg;base64,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");
+background-repeat:no-repeat;
+background-size:100% 100%;
+} */
+</style>
+</head>
+
+<body>
+<center><p th:text="${msg11}" style="color: #FF0000; padding: 10px; font-size: 24px;"></p></center>
+<center>
+
+<marquee scrollamount="10" width="60%" direction="right"  style="color: red ;border-radius: 30px;box-shadow:0px 0px 10px black ;background-color: lime; "><h1 style="padding: 10px;font-size: 30px;color: red" id="h1">Welcome to Adding  Service</h1></marquee>
+<center><p th:text="${msg12}" style="color: #008000; padding: 10px;  font-size: 24px;"></p></center>
+<center>
+<section  id="sec">
+
+<div  class="dising" id="div1">
+<h2 class="h">Add New Airline Details</h2>
+<a href ="/airline" >
+<img class="img" src="https://wallpaperaccess.com/full/2350734.png" width="50%"  height="40%" style="border-radius: 50px">
+</a>
+
+
+</div>
+<div class="dising" id="div2">
+<h2 class="h">Add New Flightinfo Details</h2>
+<a href="/flightinfo">
+<img class="img" src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?w=2000" width="50%"  height="40%" style="border-radius: 50px">
+</a>
+</div>
+
+<div class="dising" id="div3">
+<h2 class="h">Add New Flight Details</h2>
+<a href="/flight">
+<img class="img" src="https://media.istockphoto.com/id/1137971264/vector/airplane-fly-out-logo-plane-taking-off-stylized-sign.jpg?s=612x612&w=0&k=20&c=TH1vDs4wmGnfWapq_e1XYxqzQV_qxaF4_aJWoDJyKNI=" width="50%"  height="40%" style="border-radius: 50px">
+</a>
+</div>
+
+<div class="dising" id="div4">
+<h2 class="h">Add New Fare Details</h2>
+<a href="/fare">
+<img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNhiJTv0bUFW8UG5Dl0qWN8raWa0QvX_hY1A&usqp=CAU" width="50%"  height="40%" style="border-radius: 50px">
+</a>
+</div>
+<div class="dising" id="div5">
+<h2 class="h">Add New Inventory Details</h2>
+<a href="/inventory">
+<img class="img" src="https://cdn.dribbble.com/users/4118978/screenshots/11019450/inventory-saas-logo.png" width="50%"  height="40%" style="border-radius: 50px">
+</a>
+</div>
+</section>
+</center>
+</body>
+</html>

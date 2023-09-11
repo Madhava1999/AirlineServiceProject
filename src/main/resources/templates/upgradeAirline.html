@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Airline</title>
+<style>
+  body {
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/850/799/765/clouds-sunset-airplane-nature-wallpaper-preview.jpg');
+    background-size: cover; /* Adjust the background image size to cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    font-family: Arial, sans-serif; /* Font family for the entire page */
+    background-attachment: fixed;
+  }
+  /* Container for the form */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  /* Right side with the form */
+  .right {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  }
+  /* Form styles */
+  label {
+    font-size: 24px;
+    color: #333; /* Label text color */
+  }
+  input[type="text"],input[type="number"] {
+    width: 50%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Input border color */
+    border-radius: 5px;
+    background: transparent;
+  }
+  button[type="submit"] {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Button background color on hover */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="right" style=" background: transparent">
+    <form action="/upgradeairline"  style="text-align: center;">
+          <label>Enter AirLine ID:</label><br>
+      <input type="number" name="id" width="50%"><br><br>
+      <label>Enter AirLine Name:</label><br>
+      <input type="text" name="airlinename" width="50%"><br><br>
+      <button type="submit">ADD</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

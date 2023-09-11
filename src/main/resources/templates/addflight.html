@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Airline</title>
+<link rel="stylesheet" href="css/adminupdate.css">
+<style>
+  body {
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/850/799/765/clouds-sunset-airplane-nature-wallpaper-preview.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+  }
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="right" style="background: transparent;">
+    <form action="/flightOpration" style="text-align: center;">
+        <label>Enter Fare ID:</label><br>
+      <input type="number" name="fareid"><br><br>
+        <label>Enter Inventory ID:</label><br>
+      <input type="number" name="invid"><br><br>
+      <label>Enter Flight Number:</label><br>
+      <input type="text" name="flightnumber"><br><br>
+   <label>Enter Starting Point</label><br>
+      <input type="text" name="from"><br><br>
+        <label>Enter Ending Point</label><br>
+      <input type="text" name="to"><br><br>
+        <label>Enter Flight Date :  </label>
+      <input type="date" name="date" style=" width: 100px;height: 30px"><br><br>
+      <button type="submit">ADD</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
